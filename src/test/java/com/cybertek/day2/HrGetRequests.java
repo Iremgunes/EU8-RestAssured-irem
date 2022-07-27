@@ -1,5 +1,6 @@
 package com.cybertek.day2;
 
+import com.cybertek.utilities.HRTestBase;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
@@ -13,12 +14,8 @@ import javax.annotation.meta.When;
 import static io.restassured.RestAssured.given;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class HrGetRequests {
+public class HrGetRequests extends HRTestBase {
 
-    @BeforeAll
-    public static void init(){
-        RestAssured.baseURI = "http://52.87.170.214:1000/ords/hr";
-    }
 
     @DisplayName("GET request to /regions")
     @Test
